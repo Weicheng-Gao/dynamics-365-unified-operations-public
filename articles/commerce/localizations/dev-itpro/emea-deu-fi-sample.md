@@ -365,26 +365,26 @@ The following settings are included in the fiscal connector configuration that i
 To set up a development environment to test and extend the sample, follow these steps.
 
 1. Clone or download the [Dynamics 365 Commerce Solutions](https://github.com/microsoft/Dynamics365Commerce.Solutions) repository. Select a correct release branch version according to your SDK/application version. For more information, see [Download Commerce SDK samples and reference packages from GitHub and NuGet](../../dev-itpro/retail-sdk/sdk-github.md).
-1. Open the EFR solution at **Dynamics365Commerce.Solutions\\FiscalIntegration\\Efr\\EFR.sln**, and build it.
+1. Open the EFR solution at **Dynamics365Commerce.Solutions\\FiscalIntegration\\EFRSample\\EFRSample.sln**, and build it.
 1. Install Commerce runtime extensions:
 
     1. Find the CRT extension installer:
 
-        - **Commerce Scale Unit:** In the **Efr\\ScaleUnit\\ScaleUnit.EFR.Installer\\bin\\Debug\\net461** folder, find the **ScaleUnit.EFR.Installer** installer.
-        - **Local CRT on Modern POS:** In the **Efr\\ModernPOS\\ModernPOS.EFR.Installer\\bin\\Debug\\net461** folder, find the **ModernPOS.EFR.Installer** installer.
+        - **Commerce Scale Unit:** In the **EFRSample\ScaleUnit.Installer\bin\Debug\net472** folder, find the **Contoso.EFRSample.ScaleUnit.Installer** installer.
+        - **Local CRT on Store Commerce app for Windows:** In the **EFRSample\StoreCommerce.Installer\bin\Debug\net472** folder, find the **Contoso.EFRSample.StoreCommerce.Installer** installer.
 
     1. Start the CRT extension installer from the command line:
 
         - **Commerce Scale Unit:**
 
             ```Console
-            ScaleUnit.EFR.Installer.exe install --verbosity 0
+            Contoso.EFRSample.ScaleUnit.Installer.exe install --verbosity 0
             ```
 
-        - **Local CRT on Modern POS:**
+        - **Local CRT on Store Commerce app for Windows:**
 
             ```Console
-            ModernPOS.EFR.Installer.exe install --verbosity 0
+            Contoso.EFRSample.StoreCommerce.Installer.exe install --verbosity 0
             ```
 
 1. Install fiscal connector extensions:
@@ -393,11 +393,11 @@ To set up a development environment to test and extend the sample, follow these 
 
     1. Install Hardware station extensions:
 
-        1. In the **Efr\\HardwareStation\\HardwareStation.EFR.Installer\\bin\\Debug\\net461** folder, find the **HardwareStation.EFR.Installer** installer.
+        1. In the **EFRSample\HardwareStation.Installer\bin\Debug\net472** folder, find the **Contoso.EFRSample.HardwareStation.Installer** installer.
         1. Start the extension installer from the command line by running the following command.
 
             ```Console
-            HardwareStation.EFR.Installer.exe install --verbosity 0
+            Contoso.EFRSample.HardwareStation.Installer.exe install --verbosity 0
             ```
 
     1. Install POS extensions:
